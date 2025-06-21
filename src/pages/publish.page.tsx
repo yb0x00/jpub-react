@@ -1,4 +1,4 @@
-import { React, MutableRefObject, useState, useRef, useContext } from "react";
+import React, { MutableRefObject, useState, useRef, useContext } from "react";
 import { Stack, Input, Button } from "@chakra-ui/react";
 import { Editor } from "@tinymce/tinymce-react";
 import axios from "axios";
@@ -92,7 +92,7 @@ const PublishPage = () => {
         />
         <Editor
           // 발급받은 키
-          apiKey="hfpyojmdpfzi521phto7zn3wh1j2bu79yctzeqjqie88hfq4"
+          apiKey={import.meta.env.VITE_TINYMCE_API_KEY}
           onInit={(evt, editor) => (editorRef.current = editor)}
           init={{
             height: 800,
